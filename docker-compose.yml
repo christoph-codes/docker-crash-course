@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+    web:
+        build: "./site"
+        container_name: "site_c"
+        ports:
+            - "3000:3000"
+        #  volumes:
+        #   - ./site:/src/app
+        #   - ./app/node_modules
+        stdin_open: true
+        tty: true
+        command: npm run dev
